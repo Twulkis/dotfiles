@@ -1,0 +1,142 @@
+/* ===== Waybar Goth Theme ===== */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    min-height: 0;
+    color: #E5E5E5; /* Bone-white text */
+}
+
+window#waybar {
+    background: transparent;
+    box-shadow: none;
+}
+
+.modules-left {
+    padding:7px;
+    margin:5 0 3 10;
+}
+.modules-center {
+    padding:7px;
+    margin:5 0 3 0;
+}
+.modules-right {
+    padding:7px;
+    margin:5 10 3 0;
+}
+
+/* === Modules === */
+#battery,
+#cpu,
+#memory,
+#clock,
+#pulseaudio,
+#network,
+#tray,
+#custom-spotify,
+#custom-changewp{
+    padding: 5px 10px;
+    margin: 0 2px;
+    background: #151515;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* === Battery States === */
+#battery.warning {
+    color: #FF5555;
+}
+
+#battery.critical {
+    background: #8C0E3A;
+    color: #FFF;
+}
+
+/* === Hover / Active === */
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#network:hover,
+#temperature:hover{
+    background: linear-gradient(145deg, #8C0E3A, #4F0818);
+    color: #FFFFFF;
+    transition: background 0.1s ease-in-out;
+}
+
+/* === Workspaces === */
+#workspaces button {
+    padding: 4px 8px;
+    color: #E5E5E5;
+    background: #151515;
+    border-radius: 4px;
+}
+
+#workspaces button.active {    background: #8C0E3A;
+    color: #FFFFFF;
+}
+
+#workspaces button:hover {
+    background: #4F0818;
+}
+
+/* === Custom Module Glow === */
+#custom-yourmodule {
+    background: linear-gradient(135deg, #1a1a1a, #0e0e0e);
+    border: 1px solid #8C0E3A;
+    box-shadow: 0 0 4px #8C0E3A;
+}
+
+
+/* Custom module: Spotify (Goth Red Style) */
+#custom-spotify {
+  padding: 0 12px;
+  color: #E64560; /* Gothic crimson */
+  font-weight: 700;
+  font-size: 13px;
+  font-family: "JetBrainsMono Nerd Font", "Font Awesome 5 Free", monospace;
+  background-color: rgba(11, 11, 12, 0.6); /* Semi-transparent dark background */
+  border-radius: 5px;
+  transition: color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#custom-spotify:hover {
+  color: #FF5C7A; /* Bright crimson hover */
+  background-color: rgba(230, 69, 96, 0.15);
+  box-shadow: 0 0 6px rgba(230, 69, 96, 0.6);
+}
+
+/* === Wallpaper Button === */
+#custom-changewp {
+    padding: 0 10px;
+    font-size: 14px;
+    color: #E5E5E5; /* Default text color */
+    background-color: #151515; /* Dark background */
+    border-radius: 5px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#custom-changewp:hover {
+    color: #FFFFFF; /* Bright on hover */
+    background-color: #8C0E3A; /* Goth red */
+    box-shadow: 0 0 6px rgba(140, 14, 58, 0.7);
+}
+
+
+
+#temperature {
+  padding: 5px 10px;
+  background: #151515;
+  color: #E5E5E5;
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  border-radius: 5px;
+}
+
+#temperature.warning {
+  color: #FFAA00;  /* orange-ish */
+}
+
+#temperature.critical {
+  color: #FF5555;  /* red */
+}
